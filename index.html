@@ -137,8 +137,6 @@
                 <h3 class="font-serif text-3xl md:text-4xl text-brand-dark leading-snug">Seja muito <br>bem-vindo(a)!</h3>
                 <p class="font-light leading-relaxed text-brand-dark/80">O meu nome é Ana Carolina, licenciada em Estética e Cosmética pela Universidade de Araraquara (UNIARA).</p>
                 <p class="font-light leading-relaxed text-brand-dark/80">Sou apaixonada por proporcionar bem-estar e autoestima através da estética. O meu objetivo é proporcionar muito mais do que um procedimento estético, mas sim uma experiência única de relaxamento e cuidado.</p>
-                
-                <!-- REMOVIDA A ASSINATURA DAQUI A PEDIDO -->
             </div>
         </div>
     </section>
@@ -217,26 +215,37 @@
                 <div class="w-16 h-[1px] bg-brand-earth mx-auto"></div>
             </div>
             <div class="space-y-20">
-                <!-- Ventosa -->
+                <!-- Ventosa (Com duas imagens) -->
                 <div class="flex flex-col md:flex-row gap-10 items-center">
-                    <img src="https://i.imgur.com/yKgPTZ2.jpg" alt="Ventosaterapia" class="md:w-1/2 h-80 object-cover rounded-sm shadow-md">
+                    <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
+                        <img src="https://i.imgur.com/yKgPTZ2.jpg" alt="Ventosaterapia" class="w-full h-64 object-cover rounded-sm shadow-md">
+                        <img src="https://i.imgur.com/AuSz4W4.jpg" alt="Aplicação de Ventosas" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
+                    </div>
                     <div class="md:w-1/2">
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Ventosaterapia</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-4 leading-relaxed">Técnica terapêutica que estimula a circulação sanguínea, libera toxinas e reequilibra a energia do corpo, promovendo mais vitalidade e bem-estar.</p>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 leading-relaxed">Além de aliviar tensões musculares e reduzir dores, a ventosaterapia ativa o sistema energético, melhora o fluxo de energia vital e contribui para o relaxamento profundo, elevando sua disposição e autoestima.</p>
                     </div>
                 </div>
-                <!-- Ventosa + Massagem Terapêutica -->
+
+                <!-- Ventosa + Massagem Terapêutica (Com as novas imagens) -->
                 <div class="flex flex-col md:flex-row-reverse gap-10 items-center">
-                    <img src="https://i.imgur.com/AuSz4W4.jpg" alt="Ventosaterapia e Massagem Terapêutica" class="md:w-1/2 h-80 object-cover rounded-sm shadow-md">
+                    <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
+                        <img src="https://i.imgur.com/erkbdmk.jpg" alt="Massagem Terapêutica" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
+                        <img src="https://i.imgur.com/oLXLoFN.jpg" alt="Ventosaterapia com Massagem" class="w-full h-64 object-cover rounded-sm shadow-md">
+                    </div>
                     <div class="md:w-1/2">
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Ventosaterapia +<br>Massagem Terapêutica.</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 text-justify leading-relaxed">Em minha abordagem terapêutica, combino a ventosaterapia com a massagem para potencializar os benefícios de ambas as técnicas. Durante a aplicação das ventosas, realizo manobras de massagem nos membros inferiores e superiores, proporcionando alívio de dores, redução do cansaço e melhora na circulação sanguínea.</p>
                     </div>
                 </div>
+
                 <!-- Relaxante -->
                 <div class="flex flex-col md:flex-row gap-10 items-center">
-                    <img src="https://i.imgur.com/erkbdmk.jpg" alt="Massagem Relaxante" class="md:w-1/2 h-80 object-cover rounded-sm shadow-md">
+                    <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
+                        <img src="https://i.imgur.com/4ru5Uae.jpg" alt="Massagem Relaxante" class="w-full h-64 object-cover rounded-sm shadow-md">
+                        <img src="https://i.imgur.com/AoCkyUb.jpg" alt="Momento Relaxante" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
+                    </div>
                     <div class="md:w-1/2">
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Massagem<br>Relaxante</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-4 leading-relaxed text-justify">Alivia tensões, reduz o estresse e proporciona uma sensação profunda de leveza.</p>
@@ -333,12 +342,11 @@
                 logoImg.classList.add('hidden');
             }
 
-            // NOVA Lógica do Parallax (Calculado pela posição do ecrã)
+            // Lógica do Parallax (Calculado pela posição do ecrã)
             const parallaxImg = document.getElementById('parallax-img');
             const parallaxSection = document.getElementById('parallax-section');
             if (parallaxImg && parallaxSection) {
                 const rect = parallaxSection.getBoundingClientRect();
-                // Move a imagem consoante a posição da secção no ecrã do utilizador
                 parallaxImg.style.transform = `translate3d(0, ${rect.top * 0.2}px, 0)`;
             }
         });
