@@ -43,19 +43,12 @@
             scroll-padding-top: 90px; 
         }
 
-        /* Correção de Parallax para Mobile e Desktop */
+        /* Efeito de Parallax Ativado para Mobile e Desktop */
         .bg-parallax {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-        }
-
-        /* Fallback para navegadores móveis que não suportam background-attachment: fixed */
-        @media (max-width: 1024px) {
-            .bg-parallax {
-                background-attachment: scroll;
-            }
         }
 
         .hero-section {
@@ -195,9 +188,6 @@
                     <h4 class="font-serif text-2xl text-brand-dark mb-4">Limpeza de Pele Personalizada</h4>
                     <p class="font-light text-brand-dark/80 text-sm mb-4 flex-grow">Procedimento essencial para remover impurezas, pontos negros e células mortas, deixando a pele mais saudável, macia e iluminada.</p>
                     <a href="#agendamento" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mb-6">Agendar <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
-                    <div class="pt-4 mt-auto border-t border-brand-nude/30 text-center flex justify-center">
-                        <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-8 opacity-40 mix-blend-multiply">
-                    </div>
                 </div>
                 <!-- Duo Glow -->
                 <div class="bg-brand-dark p-8 shadow-lg rounded-sm flex flex-col h-full transform md:-translate-y-4 relative">
@@ -206,24 +196,18 @@
                     <p class="text-brand-nude text-sm font-medium mb-6 italic">Limpeza + Hidratação Profunda + Spa Labial</p>
                     <p class="font-light text-brand-light/80 text-sm mb-6 flex-grow">Combinação de técnicas para renovação celular, equilíbrio hídrico e estímulo ao viço natural da pele com efeito glow imediato.</p>
                     <a href="#agendamento" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-white inline-flex items-center mb-6">Agendar <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
-                    <div class="pt-4 mt-auto border-t border-white/10 text-center flex justify-center">
-                        <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-8 opacity-40 brightness-0 invert">
-                    </div>
                 </div>
                 <!-- Fios de Seda -->
                 <div class="bg-white p-8 shadow-sm border border-brand-nude/30 rounded-sm flex flex-col h-full relative">
                     <h4 class="font-serif text-2xl text-brand-dark mb-4">Hidratação com Fios de Seda</h4>
                     <p class="font-light text-brand-dark/80 text-sm mb-6 flex-grow">Tratamento intensivo que une fios de seda e ácido hialurónico para uma hidratação poderosa e toque aveludado.</p>
                     <a href="#agendamento" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mb-6">Agendar <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
-                    <div class="pt-4 mt-auto border-t border-brand-nude/30 text-center flex justify-center">
-                        <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-8 opacity-40 mix-blend-multiply">
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Divisor de Imagem Full Width (Com correção de Parallax) -->
+    <!-- Divisor de Imagem Full Width (Parallax) -->
     <section class="min-h-[500px] md:h-[65vh] bg-parallax relative flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
         <div class="absolute inset-0 bg-brand-dark/60 mix-blend-multiply"></div>
         <div class="relative z-10 text-center px-6 flex flex-col items-center justify-center">
@@ -245,9 +229,6 @@
                     <div class="md:w-1/2">
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Ventosaterapia</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 leading-relaxed">Técnica terapêutica que estimula a circulação sanguínea, libera toxinas e reequilibra a energia do corpo, promovendo alívio de dores e relaxamento profundo.</p>
-                        <div class="pt-6 border-t border-brand-nude/30 text-right flex justify-end">
-                             <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-10 opacity-40 mix-blend-multiply">
-                        </div>
                     </div>
                 </div>
                 <!-- Relaxante -->
@@ -256,9 +237,6 @@
                     <div class="md:w-1/2">
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Massagem Relaxante</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 leading-relaxed">Momento dedicado inteiramente à sua paz. Reduz o stress, a ansiedade e promove uma sensação profunda de leveza.</p>
-                        <div class="pt-6 border-t border-brand-nude/30 text-right flex justify-end">
-                            <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-10 opacity-40 mix-blend-multiply">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -272,19 +250,27 @@
                 <h3 class="font-serif text-3xl text-brand-dark mb-4">Epilação Corporal</h3>
                 <div class="w-16 h-[1px] bg-brand-earth mx-auto"></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 text-justify">
-                <div class="bg-white p-10 rounded-sm shadow-sm border border-brand-nude/30">
-                    <h4 class="font-serif text-3xl text-brand-dark mb-6">Feminina</h4>
-                    <p class="font-light text-brand-dark/80 text-sm mb-8">Remoção de pelos desde a raiz com cera, proporcionando pele lisa, macia e renovação celular.</p>
-                    <div class="pt-6 border-t border-brand-nude/30 flex justify-center">
-                        <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-10 opacity-40 mix-blend-multiply">
+            <div class="space-y-20">
+                <!-- Feminina -->
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
+                        <img src="https://i.imgur.com/k6gKJrf.jpg" alt="Epilação Feminina" class="w-full h-64 object-cover rounded-sm shadow-md">
+                        <img src="https://i.imgur.com/V39I4GD.jpg" alt="Epilação com Cera" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h4 class="font-serif text-3xl text-brand-dark mb-4">Feminina</h4>
+                        <p class="font-light text-brand-dark/80 text-sm mb-8 text-justify leading-relaxed">A epilação com cera é um método eficaz para a remoção dos pelos desde a raiz, proporcionando uma pele mais lisa, macia e com resultado duradouro. Além de reduzir o crescimento dos fios ao longo do tempo, esse procedimento também promove a renovação celular, removendo células mortas e deixando a pele mais saudável.</p>
                     </div>
                 </div>
-                <div class="bg-white p-10 rounded-sm shadow-sm border border-brand-nude/30">
-                    <h4 class="font-serif text-3xl text-brand-dark mb-6">Masculina</h4>
-                    <p class="font-light text-brand-dark/80 text-sm mb-8">Método eficaz e higiénico para remoção de pelos com resultados duradouros e cuidado com a pele.</p>
-                    <div class="pt-6 border-t border-brand-nude/30 flex justify-center">
-                         <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-10 opacity-40 mix-blend-multiply">
+
+                <!-- Masculina -->
+                <div class="flex flex-col md:flex-row-reverse gap-10 items-center">
+                    <div class="md:w-1/2 relative">
+                        <img src="https://i.imgur.com/GqNcnqA.jpg" alt="Epilação Masculina" class="w-full h-[300px] object-cover rounded-sm shadow-md">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h4 class="font-serif text-3xl text-brand-dark mb-4">Masculina</h4>
+                        <p class="font-light text-brand-dark/80 text-sm mb-8 text-justify leading-relaxed">A epilação com cera é um método eficaz para a remoção dos pelos desde a raiz, proporcionando uma pele mais lisa, macia e com resultado duradouro. Além de reduzir o crescimento dos fios ao longo do tempo, esse procedimento também promove a renovação celular, removendo células mortas e deixando a pele mais saudável.</p>
                     </div>
                 </div>
             </div>
