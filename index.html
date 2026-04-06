@@ -38,18 +38,34 @@
     </script>
 
     <style>
+        /* Ajuste do scroll para não esconder o título atrás do cabeçalho dinâmico */
+        html {
+            scroll-padding-top: 90px; 
+        }
+
+        /* Correção de Parallax para Mobile e Desktop */
         .bg-parallax {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-        html {
-            scroll-padding-top: 90px; 
+
+        /* Fallback para navegadores móveis que não suportam background-attachment: fixed */
+        @media (max-width: 1024px) {
+            .bg-parallax {
+                background-attachment: scroll;
+            }
         }
-        /* Garantir que a imagem de fundo não crie barras brancas */
+
         .hero-section {
             background-color: #FAF7F2;
+        }
+
+        /* Suavização da imagem de perfil sem fundo */
+        .profile-img {
+            mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
         }
     </style>
 </head>
@@ -123,11 +139,12 @@
         </div>
     </section>
 
-    <!-- Sobre Mim -->
+    <!-- Sobre Mim (Com imagem transparente) -->
     <section id="sobre" class="py-24 bg-white relative">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ana Carolina Andrade" class="rounded-t-full w-full h-[600px] object-cover shadow-xl border-4 border-brand-light">
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Imagem com fundo transparente integrada ao site -->
+                <img src="https://i.imgur.com/cV9MUJw.png" alt="Ana Carolina Andrade" class="w-full max-w-[450px] h-auto object-contain profile-img">
             </div>
             <div class="md:w-1/2 space-y-6">
                 <span class="text-brand-earth text-sm font-bold tracking-widest uppercase">Apresentação</span>
@@ -206,7 +223,7 @@
         </div>
     </section>
 
-    <!-- Divisor de Imagem Full Width -->
+    <!-- Divisor de Imagem Full Width (Com correção de Parallax) -->
     <section class="min-h-[500px] md:h-[65vh] bg-parallax relative flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
         <div class="absolute inset-0 bg-brand-dark/60 mix-blend-multiply"></div>
         <div class="relative z-10 text-center px-6 flex flex-col items-center justify-center">
