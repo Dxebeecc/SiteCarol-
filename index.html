@@ -71,7 +71,7 @@
 
             <!-- Centro: Logo Dinâmico -->
             <a href="#" class="flex-shrink-0 flex items-center justify-center min-w-[200px]">
-                <h1 id="logo-text" class="font-serif text-2xl font-semibold tracking-wide text-brand-dark transition-all duration-300">Andrade Estética</h1>
+                <h1 id="logo-text" class="font-sans-alt font-light text-2xl tracking-widest text-brand-dark transition-all duration-300">Andrade Estética</h1>
                 <img id="logo-img" src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura Andrade Estética" class="h-10 mix-blend-multiply hidden transition-all duration-300">
             </a>
 
@@ -138,21 +138,74 @@
                 <p class="font-light leading-relaxed text-brand-dark/80">O meu nome é Ana Carolina, licenciada em Estética e Cosmética pela Universidade de Araraquara (UNIARA).</p>
                 <p class="font-light leading-relaxed text-brand-dark/80">Sou apaixonada por proporcionar bem-estar e autoestima através da estética. O meu objetivo é proporcionar muito mais do que um procedimento estético, mas sim uma experiência única de relaxamento e cuidado.</p>
                 
-                <div class="pt-8 text-right">
-                    <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura Andrade Estética" class="h-10 ml-auto opacity-50 mix-blend-multiply">
+                <!-- REMOVIDA A ASSINATURA DAQUI A PEDIDO -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultoria de Skincare -->
+    <section class="py-20 bg-brand-nude/20">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoria de Skincare" class="w-full h-[400px] object-cover rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 space-y-6 relative">
+                <div class="mb-4">
+                    <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura Andrade Estética" class="h-8 opacity-40 mix-blend-multiply">
+                </div>
+                <h3 class="font-serif text-3xl md:text-4xl text-brand-dark leading-tight">Consultoria de <br>Skincare Personalizada</h3>
+                <p class="font-light text-brand-dark/80 text-sm text-justify">Cada pele é única e merece um cuidado feito sob medida. A consultoria de skincare é um atendimento individualizado que avalia profundamente as necessidades da sua pele, levando em conta fatores como rotina, alimentação, estilo de vida, hábitos, sensibilidade e objetivos estéticos.</p>
+                <p class="font-light text-brand-dark/80 text-sm text-justify">Após esta análise completa, é elaborado um protocolo de cuidados com produtos manipulados personalizados, formulados exclusivamente com ativos específicos para o seu tipo de pele e as suas necessidades reais.</p>
+                <div class="bg-brand-light p-4 rounded border border-brand-earth/30 mt-6 inline-block">
+                    <p class="text-xs font-bold tracking-widest text-brand-earth uppercase">Investimento: <span class="font-light text-brand-dark ml-2">Valor sob consulta</span></p>
+                </div>
+                <a href="#agendamento" class="block text-brand-earth font-bold text-sm tracking-wider uppercase hover:text-brand-dark mt-4">
+                    Agendar Consultoria <i data-feather="arrow-right" class="w-4 h-4 ml-1 inline"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Faciais -->
+    <section id="faciais" class="py-24 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="font-serif text-3xl text-brand-dark mb-4">Tratamentos Faciais</h3>
+                <div class="w-16 h-[1px] bg-brand-earth mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Limpeza de Pele -->
+                <div class="bg-white p-8 shadow-sm border border-brand-nude/30 rounded-sm flex flex-col h-full relative">
+                    <h4 class="font-serif text-2xl text-brand-dark mb-4">Limpeza de Pele Personalizada</h4>
+                    <p class="font-light text-brand-dark/80 text-sm mb-4 flex-grow">Procedimento essencial para remover impurezas, pontos negros e células mortas, deixando a pele mais saudável, macia e iluminada.</p>
+                    <a href="#agendamento" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mb-6">Agendar <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+                <!-- Duo Glow -->
+                <div class="bg-brand-dark p-8 shadow-lg rounded-sm flex flex-col h-full transform md:-translate-y-4 relative">
+                    <div class="text-brand-earth text-xs font-bold tracking-widest uppercase mb-1">Protocolo</div>
+                    <h4 class="font-serif text-3xl text-brand-light mb-1">Duo Glow</h4>
+                    <p class="text-brand-nude text-sm font-medium mb-6 italic">Limpeza + Hidratação Profunda + Spa Labial</p>
+                    <p class="font-light text-brand-light/80 text-sm mb-6 flex-grow">Combinação de técnicas para renovação celular, equilíbrio hídrico e estímulo ao viço natural da pele com efeito glow imediato.</p>
+                    <a href="#agendamento" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-white inline-flex items-center mb-6">Agendar <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+                <!-- Fios de Seda -->
+                <div class="bg-white p-8 shadow-sm border border-brand-nude/30 rounded-sm flex flex-col h-full relative">
+                    <h4 class="font-serif text-2xl text-brand-dark mb-4">Hidratação com Fios de Seda</h4>
+                    <p class="font-light text-brand-dark/80 text-sm mb-6 flex-grow">Tratamento intensivo que une fios de seda e ácido hialurónico para uma hidratação poderosa e toque aveludado.</p>
+                    <a href="#agendamento" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mb-6">Agendar <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Divisor de Imagem Full Width (Parallax Corrigido com JS) -->
-    <section class="relative min-h-[500px] md:h-[65vh] overflow-hidden flex items-center justify-center">
-        <!-- Fundo movido pelo Javascript -->
-        <div id="parallax-img" class="absolute top-[-20%] left-0 w-full h-[140%] bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center z-0 transition-transform duration-75 ease-out"></div>
+    <section id="parallax-section" class="relative min-h-[400px] md:min-h-[500px] lg:h-[65vh] overflow-hidden flex items-center justify-center">
+        <!-- Fundo movido pelo Javascript com margens maiores para nunca sair da caixa -->
+        <div id="parallax-img" class="absolute top-[-30%] left-0 w-full h-[160%] bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center z-0 will-change-transform transition-transform duration-75 ease-out"></div>
         
         <div class="absolute inset-0 bg-brand-dark/60 mix-blend-multiply z-10"></div>
         <div class="relative z-20 text-center px-6 flex flex-col items-center justify-center">
-             <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-24 md:h-32 opacity-80 brightness-0 invert">
+             <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-20 md:h-32 opacity-80 brightness-0 invert">
         </div>
     </section>
 
@@ -280,10 +333,13 @@
                 logoImg.classList.add('hidden');
             }
 
-            // Lógica do Parallax (Garante funcionamento no iOS/Android)
+            // NOVA Lógica do Parallax (Calculado pela posição do ecrã)
             const parallaxImg = document.getElementById('parallax-img');
-            if (parallaxImg) {
-                parallaxImg.style.transform = `translate3d(0, ${scrollY * 0.3}px, 0)`;
+            const parallaxSection = document.getElementById('parallax-section');
+            if (parallaxImg && parallaxSection) {
+                const rect = parallaxSection.getBoundingClientRect();
+                // Move a imagem consoante a posição da secção no ecrã do utilizador
+                parallaxImg.style.transform = `translate3d(0, ${rect.top * 0.2}px, 0)`;
             }
         });
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
