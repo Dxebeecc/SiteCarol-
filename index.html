@@ -105,7 +105,6 @@
                 <h1 id="logo-text" class="font-sans-alt font-medium text-xl md:text-2xl tracking-widest text-brand-dark transition-all duration-300 uppercase">Ana Carolina</h1>
                 
                 <!-- [LOGO] IMAGEM DA ASSINATURA NO CABEÇALHO (Aparece ao rolar a página) -->
-                <!-- loading="lazy" adicionado aqui para não competir com a capa -->
                 <img id="logo-img" src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura Andrade Estética" loading="lazy" class="h-10 mix-blend-multiply hidden transition-all duration-300">
             </a>
             
@@ -138,7 +137,6 @@
     <section class="hero-section relative h-screen flex flex-col items-center justify-start pt-36 md:pt-40 overflow-hidden">
         
         <!-- [IMG-CAPA] IMAGEM DE FUNDO DA CAPA INICIAL (Frascos) -->
-        <!-- OTIMIZADA: Transformada de BG CSS para <img> real para carregar instantaneamente -->
         <img src="https://i.imgur.com/LGln6Vh.png" alt="Fundo Capa" fetchpriority="high" decoding="sync" class="absolute inset-0 w-full h-full object-cover object-bottom mix-blend-multiply opacity-95 z-0">
         
         <div class="relative z-10 text-center px-6 flex flex-col items-center w-full mt-4 md:mt-8">
@@ -178,7 +176,7 @@
             
             <div class="md:w-1/2 flex justify-center min-h-[300px]">
                 <!-- [IMG-SOBRE] FOTO DA ANA CAROLINA (Efeito Nuvem/Sem Fundo) -->
-                <img src="https://i.imgur.com/TAbxONY.png" alt="Ana Carolina Andrade" fetchpriority="high" decoding="sync" class="w-full max-w-[450px] h-auto object-contain profile-img">
+                <img src="https://i.imgur.com/TAbxONY.png" alt="Ana Carolina Andrade" fetchpriority="high" decoding="async" class="w-full max-w-[450px] h-auto object-contain profile-img">
             </div>
             
             <div class="md:w-1/2 space-y-6">
@@ -274,16 +272,15 @@
     <!-- ======================================================= -->
     <!-- SECÇÃO 5: DIVISOR PARALLAX (Imagem Gigante Animada)     -->
     <!-- ======================================================= -->
-    <section id="parallax-section" class="relative min-h-[400px] md:min-h-[500px] lg:h-[65vh] overflow-hidden flex items-center justify-center">
+    <section id="parallax-section" class="relative min-h-[400px] md:min-h-[500px] lg:h-[65vh] overflow-hidden flex items-center justify-center bg-brand-dark">
         
         <!-- [IMG-PARALLAX] IMAGEM DE FUNDO DO PARALLAX -->
-        <!-- OTIMIZADA: Transformada em <img> real para carregar sem travar o CSS -->
-        <img id="parallax-img" src="https://i.imgur.com/oEOM72a.jpg" alt="Fundo Parallax" loading="lazy" decoding="async" class="absolute top-[-30%] left-0 w-full h-[160%] object-cover object-center z-0 will-change-transform transform-gpu">
+        <img id="parallax-img" src="https://i.imgur.com/oEOM72a.jpg" alt="Fundo Parallax" loading="lazy" decoding="async" class="absolute top-[-20%] left-0 w-full h-[150%] object-cover object-center z-0 will-change-transform transform-gpu">
         
         <div class="absolute inset-0 bg-brand-dark/60 mix-blend-multiply z-10"></div>
         
         <div class="relative z-20 text-center px-6 flex flex-col items-center justify-center">
-             <!-- [LOGO] IMAGEM DA ASSINATURA EM CIMA DO PARALLAX (Em cor branca/invertida) -->
+             <!-- [LOGO] IMAGEM DA ASSINATURA EM CIMA DO PARALLAX -->
              <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" loading="lazy" class="h-20 md:h-32 opacity-80 brightness-0 invert">
         </div>
     </section>
@@ -305,9 +302,9 @@
                 <!-- ================= VENTOSATERAPIA ================= -->
                 <div class="flex flex-col md:flex-row gap-10 items-center">
                     <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
-                        <!-- [IMG-VENTOSA-1] FOTO 1 DA VENTOSA (Costas Principal) -->
+                        <!-- [IMG-VENTOSA-1] FOTO 1 DA VENTOSA -->
                         <img src="https://i.imgur.com/ziZ5Gun.jpg" alt="Ventosaterapia" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md">
-                        <!-- [IMG-VENTOSA-2] FOTO 2 DA VENTOSA (Detalhe Cima/Direita) -->
+                        <!-- [IMG-VENTOSA-2] FOTO 2 DA VENTOSA -->
                         <img src="https://i.imgur.com/1mzoJyU.jpg" alt="Aplicação de Ventosas" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
                     </div>
                     <div class="md:w-1/2">
@@ -315,7 +312,7 @@
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Ventosaterapia</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-4 leading-relaxed">Técnica terapêutica que estimula a circulação sanguínea, libera toxinas e reequilibra a energia do corpo, promovendo mais vitalidade e bem-estar.</p>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 leading-relaxed">Além de aliviar tensões musculares e reduzir dores, a ventosaterapia ativa o sistema energético, melhora o fluxo de energia vital e contribui para o relaxamento profundo, elevando sua disposição e autoestima.</p>
-                        <!-- LINK WHATSAPP: VENTOSATERAPIA -->
+                        <!-- LINK WHATSAPP -->
                         <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20*Ventosaterapia*." target="_blank" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mt-2">Agendar Sessão <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
@@ -323,16 +320,16 @@
                 <!-- ================= VENTOSA + MASSAGEM ================= -->
                 <div class="flex flex-col md:flex-row-reverse gap-10 items-center">
                     <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
-                        <!-- [IMG-TERAP-1] FOTO 1 MASSAGEM TERAPÊUTICA (Cima/Esquerda) -->
+                        <!-- [IMG-TERAP-1] FOTO 1 MASSAGEM TERAPÊUTICA -->
                         <img src="https://i.imgur.com/fWu3Nwd.jpg" alt="Massagem Terapêutica" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
-                        <!-- [IMG-TERAP-2] FOTO 2 MASSAGEM TERAPÊUTICA (Costas Principal/Direita) -->
+                        <!-- [IMG-TERAP-2] FOTO 2 MASSAGEM TERAPÊUTICA -->
                         <img src="https://i.imgur.com/Y5JL7h0.jpg" alt="Ventosaterapia com Massagem" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md">
                     </div>
                     <div class="md:w-1/2">
-                        <!-- TEXTO E DESCRIÇÃO: VENTOSATERAPIA + MASSAGEM -->
+                        <!-- TEXTO E DESCRIÇÃO -->
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Ventosaterapia +<br>Massagem Terapêutica.</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 text-justify leading-relaxed">Em minha abordagem terapêutica, combino a ventosaterapia com a massagem para potencializar os benefícios de ambas as técnicas. Durante a aplicação das ventosas, realizo manobras de massagem nos membros inferiores e superiores, proporcionando alívio de dores, redução do cansaço e melhora na circulação sanguínea.</p>
-                        <!-- LINK WHATSAPP: VENTOSA + MASSAGEM -->
+                        <!-- LINK WHATSAPP -->
                         <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20agendar%20*Ventosaterapia%20%2B%20Massagem%20Terap%C3%AAutica*." target="_blank" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mt-2">Agendar Sessão <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
@@ -340,18 +337,18 @@
                 <!-- ================= MASSAGEM RELAXANTE ================= -->
                 <div class="flex flex-col md:flex-row gap-10 items-center">
                     <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
-                        <!-- [IMG-RELAX-1] FOTO 1 MASSAGEM RELAXANTE (Costas Principal/Esquerda) -->
+                        <!-- [IMG-RELAX-1] FOTO 1 MASSAGEM RELAXANTE -->
                         <img src="https://i.imgur.com/1TM18q1.jpg" alt="Massagem Relaxante" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md">
-                        <!-- [IMG-RELAX-2] FOTO 2 MASSAGEM RELAXANTE (Pés Cima/Direita) -->
+                        <!-- [IMG-RELAX-2] FOTO 2 MASSAGEM RELAXANTE -->
                         <img src="https://i.imgur.com/UZxQsEw.jpg" alt="Momento Relaxante" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
                     </div>
                     <div class="md:w-1/2">
-                        <!-- TEXTO E DESCRIÇÃO: MASSAGEM RELAXANTE -->
+                        <!-- TEXTO E DESCRIÇÃO -->
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Massagem<br>Relaxante</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-4 leading-relaxed text-justify">Alivia tensões, reduz o estresse e proporciona uma sensação profunda de leveza.</p>
                         <p class="font-light text-brand-dark/80 text-sm mb-4 leading-relaxed text-justify">Com manobras suaves por todo o corpo, estimula a circulação, melhora o sono, diminui a ansiedade e traz equilíbrio físico e emocional.</p>
                         <p class="font-light text-brand-dark/80 text-sm mb-6 leading-relaxed text-justify">Um momento para cuidar de si e restaurar as energias.</p>
-                        <!-- LINK WHATSAPP: MASSAGEM RELAXANTE -->
+                        <!-- LINK WHATSAPP -->
                         <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20agendar%20uma%20*Massagem%20Relaxante*." target="_blank" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center mt-2">Agendar Sessão <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
@@ -376,16 +373,16 @@
                 <!-- ================= EPILAÇÃO FEMININA ================= -->
                 <div class="flex flex-col md:flex-row gap-10 items-center">
                     <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
-                        <!-- [IMG-EPIL-FEM-1] FOTO 1 EPILAÇÃO FEMININA (Rosto/Principal) -->
+                        <!-- [IMG-EPIL-FEM-1] FOTO 1 EPILAÇÃO FEMININA -->
                         <img src="https://i.imgur.com/B0YnZh2.jpg" alt="Epilação Feminina" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md">
-                        <!-- [IMG-EPIL-FEM-2] FOTO 2 EPILAÇÃO FEMININA (Cera) -->
+                        <!-- [IMG-EPIL-FEM-2] FOTO 2 EPILAÇÃO FEMININA -->
                         <img src="https://i.imgur.com/gM5CSZL.jpg" alt="Epilação com Cera" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
                     </div>
                     <div class="md:w-1/2">
-                        <!-- TEXTO E DESCRIÇÃO: EPILAÇÃO FEMININA -->
+                        <!-- TEXTO E DESCRIÇÃO -->
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Feminina</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-8 text-justify leading-relaxed">A epilação com cera é um método eficaz para a remoção dos pelos desde a raiz, proporcionando uma pele mais lisa, macia e com resultado duradouro. Além de reduzir o crescimento dos fios ao longo do tempo, esse procedimento também promove a renovação celular, removendo células mortas e deixando a pele mais saudável.</p>
-                        <!-- LINK WHATSAPP: EPILAÇÃO FEMININA -->
+                        <!-- LINK WHATSAPP -->
                         <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20*Epila%C3%A7%C3%A3o%20Feminina*." target="_blank" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center">Agendar Sessão <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
@@ -393,16 +390,16 @@
                 <!-- ================= EPILAÇÃO MASCULINA ================= -->
                 <div class="flex flex-col md:flex-row-reverse gap-10 items-center">
                     <div class="md:w-1/2 relative grid grid-cols-2 gap-4">
-                        <!-- [IMG-EPIL-MASC-1] FOTO 1 EPILAÇÃO MASCULINA (Pernas) -->
+                        <!-- [IMG-EPIL-MASC-1] FOTO 1 EPILAÇÃO MASCULINA -->
                         <img src="https://i.imgur.com/VyOo9mf.jpg" alt="Epilação Masculina" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md mt-8">
-                        <!-- [IMG-EPIL-MASC-2] FOTO 2 EPILAÇÃO MASCULINA (Detalhe) -->
+                        <!-- [IMG-EPIL-MASC-2] FOTO 2 EPILAÇÃO MASCULINA -->
                         <img src="https://i.imgur.com/ihh1JY2.jpg" alt="Epilação Masculina Detalhe" loading="lazy" decoding="async" class="w-full h-64 object-cover rounded-sm shadow-md">
                     </div>
                     <div class="md:w-1/2">
-                        <!-- TEXTO E DESCRIÇÃO: EPILAÇÃO MASCULINA -->
+                        <!-- TEXTO E DESCRIÇÃO -->
                         <h4 class="font-serif text-3xl text-brand-dark mb-4">Masculina</h4>
                         <p class="font-light text-brand-dark/80 text-sm mb-8 text-justify leading-relaxed">A epilação com cera é um método eficaz para a remoção dos pelos desde a raiz, proporcionando uma pele mais lisa, macia e com resultado duradouro. Além de reduzir o crescimento dos fios ao longo do tempo, esse procedimento também promove a renovação celular, removendo células mortas e deixando a pele mais saudável.</p>
-                        <!-- LINK WHATSAPP: EPILAÇÃO MASCULINA -->
+                        <!-- LINK WHATSAPP -->
                         <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20*Epila%C3%A7%C3%A3o%20Masculina*." target="_blank" class="text-brand-earth font-bold text-xs tracking-wider uppercase hover:text-brand-dark inline-flex items-center">Agendar Sessão <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
@@ -462,72 +459,81 @@
 
     <!-- ======================================================= -->
     <!-- LÓGICA DE PROGRAMAÇÃO (JavaScript e Ícones)             -->
-    <!-- Ícones movidos para o final para não travarem o site    -->
+    <!-- OTIMIZAÇÃO MÁXIMA (Cache de elementos e Eventos Passivos)-->
     <!-- ======================================================= -->
     
-    <!-- Feather Icons Script (Movido para o fundo) -->
     <script src="https://unpkg.com/feather-icons" defer></script>
-    
     <script>
-        // Aguarda os ícones carregarem para os desenhar
         document.addEventListener("DOMContentLoaded", function() {
             if (typeof feather !== 'undefined') {
                 feather.replace();
             }
-        });
-        
-        let ticking = false;
-        let lastScrollY = window.scrollY;
-        let parallaxSectionTop = 0;
 
-        function initParallax() {
-            const section = document.getElementById('parallax-section');
-            if (section) {
-                parallaxSectionTop = section.getBoundingClientRect().top + window.scrollY;
-            }
-        }
+            // === OTIMIZAÇÃO MÁXIMA: CACHE DE ELEMENTOS ===
+            // O site agora pega nestes elementos 1 vez e guarda na memória!
+            const header = document.getElementById('main-header');
+            const logoText = document.getElementById('logo-text');
+            const logoImg = document.getElementById('logo-img');
+            const parallaxSection = document.getElementById('parallax-section');
+            const parallaxImg = document.getElementById('parallax-img');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        window.addEventListener('load', initParallax);
-        window.addEventListener('resize', initParallax);
+            let ticking = false;
+            let isHeaderWhite = false; // Controle de estado para não repetir código
+            let lastScrollY = window.scrollY;
 
-        window.addEventListener('scroll', () => {
-            lastScrollY = window.scrollY;
-            
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const header = document.getElementById('main-header');
-                    const logoText = document.getElementById('logo-text');
-                    const logoImg = document.getElementById('logo-img');
-                    
-                    if (lastScrollY > 50) {
-                        header.classList.add('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
-                        header.classList.remove('py-6', 'bg-transparent', 'border-transparent');
-                        logoText.classList.add('hidden');
-                        logoImg.classList.remove('hidden');
-                    } else {
-                        header.classList.remove('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
-                        header.classList.add('py-6', 'bg-transparent', 'border-transparent');
-                        logoText.classList.remove('hidden');
-                        logoImg.classList.add('hidden');
-                    }
+            window.addEventListener('scroll', () => {
+                lastScrollY = window.scrollY;
+                
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        
+                        // 1. LÓGICA DO CABEÇALHO (Agora só executa se precisar mudar)
+                        if (lastScrollY > 50 && !isHeaderWhite) {
+                            header.classList.add('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
+                            header.classList.remove('py-6', 'bg-transparent', 'border-transparent');
+                            logoText.classList.add('hidden');
+                            logoImg.classList.remove('hidden');
+                            isHeaderWhite = true;
+                        } else if (lastScrollY <= 50 && isHeaderWhite) {
+                            header.classList.remove('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
+                            header.classList.add('py-6', 'bg-transparent', 'border-transparent');
+                            logoText.classList.remove('hidden');
+                            logoImg.classList.add('hidden');
+                            isHeaderWhite = false;
+                        }
 
-                    const parallaxImg = document.getElementById('parallax-img');
-                    if (parallaxImg && parallaxSectionTop > 0) {
-                        const relativePos = parallaxSectionTop - lastScrollY;
-                        parallaxImg.style.transform = `translate3d(0, ${relativePos * 0.15}px, 0)`;
-                    }
-                    
-                    ticking = false;
+                        // 2. LÓGICA DO PARALLAX (Checagem de Visibilidade + Cache)
+                        if (parallaxSection && parallaxImg) {
+                            const rect = parallaxSection.getBoundingClientRect();
+                            
+                            // SÓ FAZ O CÁLCULO SE A IMAGEM ESTIVER NA TELA DO CELULAR
+                            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                                // O multiplicador 0.15 controla a velocidade do efeito
+                                const yPos = (rect.top - window.innerHeight) * 0.15;
+                                parallaxImg.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                            }
+                        }
+                        
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true }); // passive: true liberta o scroll nativo do celular
+
+            // Controle do Menu Mobile usando o cache
+            if(mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
                 });
-                ticking = true;
             }
-        }, { passive: true });
-
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
+            if(mobileLinks) {
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                });
+            }
         });
     </script>
 </body>
