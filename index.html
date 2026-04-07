@@ -198,10 +198,10 @@
         </div>
     </section>
 
-    <!-- Divisor de Imagem Full Width -->
+    <!-- Divisor de Imagem Full Width (Parallax Otimizado com transform-gpu e Imagem Menor) -->
     <section id="parallax-section" class="relative min-h-[400px] md:min-h-[500px] lg:h-[65vh] overflow-hidden flex items-center justify-center">
-        <!-- Elemento do parallax com will-change-transform para forçar aceleração de hardware -->
-        <div id="parallax-img" class="absolute top-[-30%] left-0 w-full h-[160%] bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center z-0 will-change-transform"></div>
+        <!-- O w=1080&q=70 alivia enormemente a VRAM do celular. O transform-gpu joga o esforço para a placa de vídeo. -->
+        <div id="parallax-img" class="absolute top-[-30%] left-0 w-full h-[160%] bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=70')] bg-cover bg-center z-0 will-change-transform transform-gpu"></div>
         <div class="absolute inset-0 bg-brand-dark/60 mix-blend-multiply z-10"></div>
         <div class="relative z-20 text-center px-6 flex flex-col items-center justify-center">
              <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-20 md:h-32 opacity-80 brightness-0 invert">
