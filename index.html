@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -48,21 +48,21 @@
             background-color: #FAF7F2;
         }
 
-        /* Suavização da imagem de perfil sem fundo */
+        /* Suavização da imagem de perfil sem fundo (Efeito Nuvem Reforçado) */
         .profile-img {
-            mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
         }
     </style>
 </head>
 <body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-earth selection:text-white">
 
     <!-- Header / Navbar Dinâmico -->
-    <header id="main-header" class="fixed w-full z-50 py-6 transition-all duration-500 bg-brand-light/90 backdrop-blur-md border-b border-transparent">
+    <header id="main-header" class="fixed w-full z-50 py-6 transition-all duration-500 bg-transparent border-b border-transparent">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             
             <!-- Esquerda: Menu de Navegação -->
-            <nav class="hidden lg:flex flex-1 justify-start space-x-8 text-[11px] font-bold tracking-[0.2em] uppercase text-brand-dark/70">
+            <nav class="hidden lg:flex flex-1 justify-start space-x-8 text-[11px] font-bold tracking-[0.2em] uppercase text-brand-dark/80">
                 <a href="#sobre" class="hover:text-brand-earth transition-colors">Sobre</a>
                 <a href="#faciais" class="hover:text-brand-earth transition-colors">Faciais</a>
                 <a href="#corporais" class="hover:text-brand-earth transition-colors">Corporais</a>
@@ -71,7 +71,7 @@
 
             <!-- Centro: Logo Dinâmico -->
             <a href="#" class="flex-shrink-0 flex items-center justify-center min-w-[200px]">
-                <h1 id="logo-text" class="font-sans-alt font-light text-2xl tracking-widest text-brand-dark transition-all duration-300">Andrade Estética</h1>
+                <h1 id="logo-text" class="font-sans-alt font-medium text-xl md:text-2xl tracking-widest text-brand-dark transition-all duration-300 uppercase">Ana Carolina</h1>
                 <img id="logo-img" src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura Andrade Estética" class="h-10 mix-blend-multiply hidden transition-all duration-300">
             </a>
 
@@ -97,31 +97,36 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero-section relative h-screen flex flex-col items-center justify-start pt-32 md:pt-40 overflow-hidden">
+    <section class="hero-section relative h-screen flex flex-col items-center justify-start pt-36 md:pt-40 overflow-hidden">
+        
+        <!-- Imagem de Fundo -->
         <div class="absolute inset-0 bg-[url('https://i.imgur.com/kQvpZ0n.png')] bg-cover bg-bottom bg-no-repeat mix-blend-multiply opacity-95 z-0"></div>
 
         <div class="relative z-10 text-center px-6 flex flex-col items-center w-full mt-4 md:mt-8">
-            <p class="text-[8px] md:text-[10px] font-bold tracking-[0.3em] text-brand-dark/50 uppercase mb-6 md:mb-10">
-                Catálogo de Procedimentos
-            </p>
-
-            <h2 class="font-sans-alt font-light text-5xl md:text-6xl lg:text-7xl text-brand-dark leading-tight tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
-                Andrade <br> Estética
+            
+            <!-- Frase de Impacto -->
+            <h2 class="font-sans-alt font-light text-4xl md:text-5xl lg:text-6xl text-brand-dark leading-tight tracking-[0.05em] md:tracking-[0.1em] mb-4">
+                Pause, respire, <br> <i class="font-serif italic font-normal tracking-normal text-5xl md:text-6xl lg:text-7xl">cuide-se.</i>
             </h2>
             
-            <p class="text-[9px] md:text-xs font-semibold tracking-[0.2em] md:tracking-[0.3em] text-brand-earth uppercase max-w-2xl text-center">
+            <!-- Subtítulo -->
+            <p class="text-[9px] md:text-xs font-semibold tracking-[0.2em] md:tracking-[0.3em] text-brand-earth uppercase max-w-2xl text-center mb-8 md:mb-12 mt-4">
                 Skincare, Limpeza de Pele, Massagem e Epilação
             </p>
 
-            <div class="mt-8 md:mt-12 flex items-center justify-center gap-4 opacity-70">
+            <!-- Assinatura Central -->
+            <div class="flex items-center justify-center gap-4 opacity-80 mb-16 md:mb-20">
                 <div class="w-12 h-[1px] bg-brand-dark/20 hidden md:block"></div>
                 <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura Andrade Estética" class="h-10 md:h-14 mix-blend-multiply">
                 <div class="w-12 h-[1px] bg-brand-dark/20 hidden md:block"></div>
             </div>
+        </div>
 
-            <a href="#faciais" class="mt-10 bg-brand-dark text-white px-8 py-4 rounded-full text-xs tracking-widest uppercase hover:bg-brand-earth transition-colors duration-300 shadow-lg inline-block">
-                Ver Procedimentos
-            </a>
+        <!-- DIVISOR SUAVE -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg class="relative block w-full h-[15px] md:h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,120 C300,120 900,0 1200,0 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
         </div>
     </section>
 
@@ -129,6 +134,7 @@
     <section id="sobre" class="py-16 md:py-24 bg-white relative">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 flex justify-center">
+                <!-- Imagem com a classe do Efeito Nuvem -->
                 <img src="https://i.imgur.com/cV9MUJw.png" alt="Ana Carolina Andrade" class="w-full max-w-[450px] h-auto object-contain profile-img">
             </div>
             <div class="md:w-1/2 space-y-6">
@@ -330,12 +336,12 @@
             
             if (scrollY > 50) {
                 header.classList.add('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
-                header.classList.remove('py-6', 'bg-brand-light/90', 'border-transparent');
+                header.classList.remove('py-6', 'bg-transparent', 'border-transparent');
                 logoText.classList.add('hidden');
                 logoImg.classList.remove('hidden');
             } else {
                 header.classList.remove('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
-                header.classList.add('py-6', 'bg-brand-light/90', 'border-transparent');
+                header.classList.add('py-6', 'bg-transparent', 'border-transparent');
                 logoText.classList.remove('hidden');
                 logoImg.classList.add('hidden');
             }
