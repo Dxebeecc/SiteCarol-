@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Carolina Andrade | Estética</title>
     
-    <!-- Pré-carregamento das imagens principais (ATUALIZADO COM A NOVA FOTO OTIMIZADA) -->
+    <!-- Pré-carregamento das imagens principais -->
     <link rel="preload" as="image" href="https://i.imgur.com/kQvpZ0n.png">
-    <!-- Link novo e otimizado da Ana Carolina -->
     <link rel="preload" as="image" href="https://i.imgur.com/TAbxONY.png">
     
     <!-- Tailwind CSS -->
@@ -113,11 +112,10 @@
         </div>
     </section>
 
-    <!-- Sobre Mim (ATUALIZADO COM A NOVA FOTO OTIMIZADA) -->
+    <!-- Sobre Mim -->
     <section id="sobre" class="py-16 md:py-24 bg-white relative">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 flex justify-center min-h-[300px]">
-                <!-- PRIORIDADE MÁXIMA NA IMAGEM DELA + LINK NOVO -->
                 <img src="https://i.imgur.com/TAbxONY.png" alt="Ana Carolina Andrade" fetchpriority="high" decoding="async" class="w-full max-w-[450px] h-auto object-contain profile-img">
             </div>
             <div class="md:w-1/2 space-y-6">
@@ -133,7 +131,6 @@
     <section class="py-12 md:py-20 bg-brand-nude/20">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
             <div class="md:w-1/2">
-                <!-- IMAGENS ABAIXO DO SOBRE MIM COM 'loading="lazy"' -->
                 <img src="https://i.imgur.com/a02oi11.jpg" alt="Consultoria de Skincare" loading="lazy" decoding="async" class="w-full h-64 md:h-[400px] object-cover object-bottom rounded-lg shadow-lg">
             </div>
             <div class="md:w-1/2 space-y-6 relative">
@@ -281,32 +278,45 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Otimizado e Compacto -->
     <footer id="agendamento" class="bg-brand-dark text-brand-light py-16 border-t-[8px] border-brand-earth">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div>
-                <h4 class="font-serif text-2xl mb-6">Andrade Estética</h4>
-                <p class="font-light text-sm mb-4 flex items-center gap-3"><i data-feather="instagram" class="w-4 h-4"></i> @andrade_estetica</p>
-                <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20os%20procedimentos." target="_blank" class="inline-flex items-center gap-2 bg-brand-earth text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-white hover:text-brand-dark transition-colors">
-                    <i data-feather="message-circle" class="w-5 h-5"></i> Falar no WhatsApp
-                </a>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-6">
+            
+            <!-- Contato (Ocupa as 2 colunas no mobile, 1 no desktop) -->
+            <div class="col-span-2 md:col-span-1">
+                <h4 class="font-serif text-2xl mb-6">Contato</h4>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="https://wa.me/5516999999999?text=Ol%C3%A1!%20Te%20conheci%20no%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20os%20procedimentos." target="_blank" class="inline-flex items-center gap-2 bg-brand-earth text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-white hover:text-brand-dark transition-colors">
+                        <i data-feather="message-circle" class="w-4 h-4"></i> WhatsApp
+                    </a>
+                    <a href="https://instagram.com/andrade_estetica" target="_blank" class="font-light text-sm flex items-center gap-2 hover:text-brand-earth transition-colors">
+                        <i data-feather="instagram" class="w-4 h-4"></i> @andrade_estetica
+                    </a>
+                </div>
             </div>
-            <div class="md:text-center">
+            
+            <!-- Pagamento (1 coluna) -->
+            <div class="col-span-1 md:text-center">
                 <h4 class="font-serif text-xl mb-6 text-brand-nude">Pagamento</h4>
-                <ul class="font-light text-sm space-y-4 inline-block text-left">
+                <ul class="font-light text-sm space-y-3 inline-block text-left">
                     <li>• PIX / Dinheiro</li>
                     <li>• Cartão de Crédito/Débito</li>
                 </ul>
             </div>
-            <div class="md:text-right text-sm font-light">
+            
+            <!-- Horário (1 coluna) -->
+            <div class="col-span-1 md:text-right text-sm font-light">
                 <h4 class="font-serif text-xl mb-6 text-brand-nude">Horário</h4>
-                <p>Seg a Sex: 09:00 - 18:00</p>
-                <p>Sáb: 09:00 - 13:00</p>
+                <div class="space-y-3">
+                    <p>Seg a Sex: 09:00 - 18:00</p>
+                    <p>Sáb: 09:00 - 13:00</p>
+                </div>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center flex flex-col items-center">
-            <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" loading="lazy" class="h-12 mb-4 opacity-30 brightness-0 invert">
-            <p class="text-xs font-light text-white/40">&copy; 2024 Andrade Estética.</p>
+
+        <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center flex flex-col items-center">
+            <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" loading="lazy" class="h-10 mb-4 opacity-30 brightness-0 invert">
+            <p class="text-xs font-light text-white/40">&copy; 2024 Ana Carolina Andrade.</p>
         </div>
     </footer>
 
