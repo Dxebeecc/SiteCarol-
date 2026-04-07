@@ -200,7 +200,8 @@
 
     <!-- Divisor de Imagem Full Width -->
     <section id="parallax-section" class="relative min-h-[400px] md:min-h-[500px] lg:h-[65vh] overflow-hidden flex items-center justify-center">
-        <div id="parallax-img" class="absolute top-[-30%] left-0 w-full h-[160%] bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center z-0 will-change-transform transition-transform duration-75 ease-out"></div>
+        <!-- REMOVIDAS AS CLASSES 'transition-transform duration-75 ease-out' PARA NÃO BRIGAR COM O JS -->
+        <div id="parallax-img" class="absolute top-[-30%] left-0 w-full h-[160%] bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center z-0 will-change-transform"></div>
         <div class="absolute inset-0 bg-brand-dark/60 mix-blend-multiply z-10"></div>
         <div class="relative z-20 text-center px-6 flex flex-col items-center justify-center">
              <img src="https://i.imgur.com/AhNe8Vd.png" alt="Assinatura" class="h-20 md:h-32 opacity-80 brightness-0 invert">
@@ -328,31 +329,44 @@
 
     <script>
         feather.replace();
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            const logoText = document.getElementById('logo-text');
-            const logoImg = document.getElementById('logo-img');
-            const scrollY = window.scrollY;
-            
-            if (scrollY > 50) {
-                header.classList.add('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
-                header.classList.remove('py-6', 'bg-transparent', 'border-transparent');
-                logoText.classList.add('hidden');
-                logoImg.classList.remove('hidden');
-            } else {
-                header.classList.remove('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
-                header.classList.add('py-6', 'bg-transparent', 'border-transparent');
-                logoText.classList.remove('hidden');
-                logoImg.classList.add('hidden');
-            }
+        
+        // Variável de controle para o requestAnimationFrame (evita sobrecarga no celular)
+        let ticking = false;
 
-            const parallaxImg = document.getElementById('parallax-img');
-            const parallaxSection = document.getElementById('parallax-section');
-            if (parallaxImg && parallaxSection) {
-                const rect = parallaxSection.getBoundingClientRect();
-                parallaxImg.style.transform = `translate3d(0, ${rect.top * 0.2}px, 0)`;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const header = document.getElementById('main-header');
+                    const logoText = document.getElementById('logo-text');
+                    const logoImg = document.getElementById('logo-img');
+                    const scrollY = window.scrollY;
+                    
+                    if (scrollY > 50) {
+                        header.classList.add('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
+                        header.classList.remove('py-6', 'bg-transparent', 'border-transparent');
+                        logoText.classList.add('hidden');
+                        logoImg.classList.remove('hidden');
+                    } else {
+                        header.classList.remove('py-3', 'bg-white/95', 'shadow-md', 'border-brand-nude/50');
+                        header.classList.add('py-6', 'bg-transparent', 'border-transparent');
+                        logoText.classList.remove('hidden');
+                        logoImg.classList.add('hidden');
+                    }
+
+                    const parallaxImg = document.getElementById('parallax-img');
+                    const parallaxSection = document.getElementById('parallax-section');
+                    if (parallaxImg && parallaxSection) {
+                        const rect = parallaxSection.getBoundingClientRect();
+                        // O movimento agora ocorre perfeitamente cravado nos frames da tela
+                        parallaxImg.style.transform = `translate3d(0, ${rect.top * 0.2}px, 0)`;
+                    }
+                    
+                    ticking = false;
+                });
+                ticking = true;
             }
         });
+
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
